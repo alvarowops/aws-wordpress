@@ -84,7 +84,7 @@ FLUSH PRIVILEGES;
 
 6. nos dirigimos a amazon RDS y en bases de datos seleccionamos la instancia
 
-7. en el punto de enlace y puerto copiamos solo el punto de enlace que es algo asi databasewordpress-instance-1.cdufmw0hwyde.us-east-1.rds.amazonaws.com
+7. en el punto de enlace y puerto copiamos solo el punto de enlace que es algo asi nombreinstancia.cdufmw0hwyde.us-east-1.rds.amazonaws.com
 
 # se instalo wordpress de manera correcta#
 
