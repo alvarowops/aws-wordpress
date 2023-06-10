@@ -1,6 +1,6 @@
 # Contenedor con Wordpress y Base de datos aurora(MySQL compatible)
 
-# clonar repositorio github#
+# clonar repositorio github
 
 git clone https://github.com/alvarowops/ev2-3-alvaronavarro.git
 
