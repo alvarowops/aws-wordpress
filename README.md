@@ -16,7 +16,7 @@ docker build -t nombreimagen .
 
 1. agregar tcp puerto 80 en origen elegir anywhere ipv4
 
-#correr contenedor en --name= podemos elegir el nombre a eleccion#
+# correr contenedor en --name= podemos elegir el nombre a eleccion
 
 docker run -d -p 80:80 --name=nombrecontenedor nombreimagen
 
