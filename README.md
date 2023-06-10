@@ -1,18 +1,18 @@
-Contenedor con Wordpress y Base de datos aurora(MySQL compatible)
+# Contenedor con Wordpress y Base de datos aurora(MySQL compatible)
 
-#clonar repositorio github#
+# clonar repositorio github#
 
 git clone https://github.com/alvarowops/ev2-3-alvaronavarro.git
 
-#ir a la carpeta del repo#
+# ir a la carpeta del repo
 
 cd ev2-3-alvaronavarro/
 
-#empaquetizar el contenedor y crear imagen#
+# empaquetizar el contenedor y crear imagen
 
 docker build -t nombreimagen .
 
-#antes de correr el contenedor debemos ir al grupo de seguridad de la instancia y editar reglas de entrada#
+# antes de correr el contenedor debemos ir al grupo de seguridad de la instancia y editar reglas de entrada
 
 1. agregar tcp puerto 80 en origen elegir anywhere ipv4
 
@@ -20,7 +20,7 @@ docker build -t nombreimagen .
 
 docker run -d -p 80:80 --name=nombrecontenedor nombreimagen
 
-#crear base de datos aurora es igual a mysql solo que de amazon#
+# crear base de datos aurora es igual a mysql solo que de amazon
 
 1. Ir a Amazon RDS
 
@@ -50,19 +50,19 @@ docker run -d -p 80:80 --name=nombrecontenedor nombreimagen
 
 14. dejar todo lo demas por defecto y hacer click en crear base de datos
 
-#instalar mysql en server ec2 para usar comandos mysql#
+# instalar mysql en server ec2 para usar comandos mysql
 
 sudo yum install mariadb105-server-utils.x86_64
 
-#conectarse a mysql aurora para dar privilegios al usuario en esa bd que creamos#
+# conectarse a mysql aurora para dar privilegios al usuario en esa bd que creamos
 
 mysql -h puntodeconexioninstancia -P 3306 -u admin -p
 
-#mostrar bd#
+# mostrar bd
 
 show databases;
 
-#dar privilegios al usuario admin en la bd#
+# dar privilegios al usuario admin en la bd
 
 GRANT ALL PRIVILEGES ON wordpress.* TO admin
 
@@ -70,7 +70,7 @@ GRANT ALL PRIVILEGES ON wordpress.* TO admin
 
 FLUSH PRIVILEGES;
 
-#conectar la base de datos con contenedor abrimos la pagina de wordpress con la ip publica de nuestro servidor ec2 donde esta el docker y añadir puerto 80 al final la URL deberia quedar asi ippublica:80#
+# conectar la base de datos con contenedor abrimos la pagina de wordpress con la ip publica de nuestro servidor ec2 donde esta el docker y añadir puerto 80 al final la URL deberia quedar asi ippublica:80
 
 1. elegir idioma de instalacion
 
@@ -86,6 +86,6 @@ FLUSH PRIVILEGES;
 
 7. en el punto de enlace y puerto copiamos solo el punto de enlace que es algo asi nombreinstancia.cdufmw0hwyde.us-east-1.rds.amazonaws.com
 
-# se instalo wordpress de manera correcta#
+# se instalo wordpress de manera correcta
 
 
