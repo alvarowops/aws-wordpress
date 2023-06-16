@@ -2,11 +2,12 @@
 
 # clonar repositorio github
 
-git clone https://github.com/alvarowops/ev2-3-alvaronavarro.git
+git clone https://github.com/alvarowops/aws-wordpress.git
 
 # ir a la carpeta del repo
-
-cd ev2-3-alvaronavarro/
+´´´
+cd aws-wordpress/
+´´´
 
 # empaquetizar el contenedor y crear imagen
 
