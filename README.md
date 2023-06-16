@@ -5,9 +5,9 @@
 git clone https://github.com/alvarowops/aws-wordpress.git
 
 # ir a la carpeta del repo
-´´´
+
 cd aws-wordpress/
-´´´
+
 
 # empaquetizar el contenedor y crear imagen
 
