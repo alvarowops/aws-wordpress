@@ -8,7 +8,12 @@ RUN apt-get update && \
 
 # Copiar archivo de configuración personalizado de Nginx
 COPY nginx.conf /etc/nginx/conf.d/
-
+#variables#
+ENV WORDPRESS_DB_HOST databasewordpress-instance-1.cdufmw0hwyde.us-east-1.rds.amazonaws.com
+ENV WORDPRESS_DB_USER admin 
+ENV WORDPRESS_DB_PASSWORD Duoc.2022 
+ENV WORDPRESS_DB_NAME nginx
+ENV WORDPRESS_TABLE_PREFIX wp_
 # Exponer el puerto HTTP
 EXPOSE 80
 
